@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "0b1b6eb3-adc5-4c4e-9530-b3e193622b94",
+		"name": "Members",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2986929",
+		"_collection_link": "https://winter-spaceship-807466.postman.co/workspace/4743ee50-b6a0-4c85-939b-585799ca1a7e/collection/2986929-0b1b6eb3-adc5-4c4e-9530-b3e193622b94?action=share&source=collection_link&creator=2986929"
+	},
+	"item": [
+		{
+			"name": "createMember",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\": \"Alapont\",\r\n    \"firstName\": \"Rafael\",\r\n    \"suffix\": null,\r\n    \"expiration\": \"1993-11-15\",\r\n    \"email\": \"r.alapont@server.com\",\r\n    \"street\": \"Eduardo Requenas, 10\",\r\n    \"city\": \"Madrid\",\r\n    \"state\": \"TX\",\r\n    \"zip\": \"28053\",\r\n    \"phone\": \"964-665-8735\",\r\n    \"interests\": \"Great Depression,Spanish-American War,Westward movement,Civil Rights,Sports\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createMember Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\": \"Gloria\",\r\n    \"firstName\": \"Tardajos\",\r\n    \"suffix\": null,\r\n    \"expiration\": \"1998-11-15\",\r\n    \"email\": \"g.tardajos@server.com\",\r\n    \"street\": \"Eduardo Requenas, 10\",\r\n    \"city\": \"Madrid\",\r\n    \"state\": \"TX\",\r\n    \"zip\": \"28053\",\r\n    \"phone\": \"964-665-8735\",\r\n    \"interests\": \"Great Depression,Spanish-American War,Westward movement,Civil Rights,Sports\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/members/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"members",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllMembers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMembers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/members/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"members",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMember",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/members/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"members",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

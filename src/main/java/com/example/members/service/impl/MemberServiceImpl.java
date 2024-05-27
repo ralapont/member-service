@@ -52,15 +52,8 @@ public class MemberServiceImpl implements MemberService {
 
         Optional<MemberEntity> oldEntityOpt = memberRepository.findById(id);
 
-        MemberEntity oldEntity = oldEntityOpt.isPresent()?
-                oldEntityOpt.get():
-                oldEntityOpt.orElseThrow(() -> new MemberNotFoundException(id));
-
-//        if (oldEntityOpt.isPresent()) {
-//            oldEntity = oldEntityOpt.get();
-//        } else {
-//            throw new MemberNotFoundException(id);
-//        }
+        MemberEntity oldEntity;
+        oldEntity = oldEntityOpt.orElseGet(() -> oldEntityOpt.orElseThrow(() -> new MemberNotFoundException(id)));
 
         modifyEntity(oldEntity, memberRequestDto);
         MemberEntity entity = memberRepository.save(oldEntity);

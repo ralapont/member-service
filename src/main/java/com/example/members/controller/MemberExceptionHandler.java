@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -19,7 +19,6 @@ public class MemberExceptionHandler  extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> handleProductNotFoundException(MemberNotFoundException ex, WebRequest request) {
 
         Map<String, Object> body = new LinkedHashMap<>();
-        Instant LocalDateTime = null;
         body.put("timestamp", LocalDateTime.now());
         body.put("message", ex.getMessage());
 

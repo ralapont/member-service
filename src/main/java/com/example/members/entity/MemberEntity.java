@@ -24,13 +24,13 @@ public class MemberEntity {
     @Column(nullable = false, name = "first_name")
     private String firstName;
 
-    @Column(nullable = true, name = "suffix")
+    @Column(name = "suffix")
     private String suffix;
 
-    @Column(nullable = true, name = "expiration")
+    @Column(name = "expiration")
     private LocalDate expiration;
 
-    @Column(nullable = true, name = "email")
+    @Column(name = "email")
     private String email;
 
     @Column(nullable = false, name = "street")
@@ -45,7 +45,7 @@ public class MemberEntity {
     @Column(nullable = false, name = "zip")
     private String zip;
 
-    @Column(nullable = true, name = "phone")
+    @Column(name = "phone")
     private String phone;
 
     @Column(nullable = false, name = "interests")

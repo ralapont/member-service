@@ -15,12 +15,12 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 import com.example.members.utils.BuildTestObjects;
 
 import java.util.List;
+import java.util.Optional;
 
 @ExtendWith(MockitoExtension.class)
 public class MemberServiceTest {
@@ -40,10 +40,10 @@ public class MemberServiceTest {
     @Test
     void getMemberByIdTest() {
 
-        when(memberRespository.findById(Integer.valueOf(1))).thenReturn(BuildTestObjects.buildEntityMock());
+        when(memberRespository.findById(1)).thenReturn(Optional.of(BuildTestObjects.buildEntityMock()));
         when(convertDtoEntity.entityToDto(any(MemberEntity.class))).thenReturn(BuildTestObjects.buildDtoResponse());
 
-        MemberResponseDto memberResponseDto = memberService.getMemberById(Integer.valueOf(1));
+        MemberResponseDto memberResponseDto = memberService.getMemberById(1);
 
         assertNotNull(memberResponseDto);
         assertNotNull(memberResponseDto);
@@ -86,8 +86,8 @@ public class MemberServiceTest {
     
     @Test
     void saveMember() {
-        when((converDtoRequest.dtoToEntity(any(MemberRequestDto.class)))).thenReturn(BuildTestObjects.buildEntityMock().get());
-        when(memberRespository.save(any(MemberEntity.class))).thenReturn(BuildTestObjects.buildEntityMock().get());
+        when((converDtoRequest.dtoToEntity(any(MemberRequestDto.class)))).thenReturn(BuildTestObjects.buildEntityMock());
+        when(memberRespository.save(any(MemberEntity.class))).thenReturn(BuildTestObjects.buildEntityMock());
         when(convertDtoEntity.entityToDto(any(MemberEntity.class))).thenReturn(BuildTestObjects.buildDtoResponse());
 
         MemberResponseDto newMemberDto = memberService.saveMember(BuildTestObjects.buildDtoRequest());
@@ -111,11 +111,11 @@ public class MemberServiceTest {
     @Test
     void updateMember() {
 
-        when(memberRespository.findById(any(Integer.class))).thenReturn(BuildTestObjects.buildEntityMock());
-        when(memberRespository.save(any(MemberEntity.class))).thenReturn(BuildTestObjects.buildEntityModifyMock().get());
+        when(memberRespository.findById(any(Integer.class))).thenReturn(Optional.of(BuildTestObjects.buildEntityMock()));
+        when(memberRespository.save(any(MemberEntity.class))).thenReturn(BuildTestObjects.buildEntityModifyMock());
         when(convertDtoEntity.entityToDto(any(MemberEntity.class))).thenReturn(BuildTestObjects.buildDtoModifyResponse());
 
-        MemberResponseDto newMemberDto = memberService.updateMember(Integer.valueOf(1), BuildTestObjects.buildDtoRequest());
+        MemberResponseDto newMemberDto = memberService.updateMember(1, BuildTestObjects.buildDtoRequest());
 
         assertNotNull(newMemberDto);
 
@@ -136,8 +136,7 @@ public class MemberServiceTest {
     @Test
     void deleteMember() {
 
-        // doNothing().when(memberRespository).deleteById(any(Integer.class));
-        memberService.deleteMember(Integer.valueOf(1));
+        memberService.deleteMember(1);
         verify(memberRespository).deleteById(any(Integer.class));
     }
 }

@@ -2,7 +2,6 @@ package com.example.members.mapper;
 
 import com.example.members.entity.MemberEntity;
 import com.example.members.model.input.MemberRequestDto;
-import com.example.members.model.output.MemberResponseDto;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

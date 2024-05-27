@@ -13,12 +13,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
@@ -37,9 +35,9 @@ public class MemberControllerTest {
     @Test
     public void getMemberByIdTest() {
 
-        when(memberService.getMemberById(Integer.valueOf(1))).thenReturn(BuildTestObjects.buildDtoResponse());
+        when(memberService.getMemberById(1)).thenReturn(BuildTestObjects.buildDtoResponse());
 
-        ResponseEntity<MemberResponseDto> memberResponse = memberController.getMemberById(Integer.valueOf(1));
+        ResponseEntity<MemberResponseDto> memberResponse = memberController.getMemberById(1);
 
         assertNotNull(memberResponse);
 
@@ -103,7 +101,7 @@ public class MemberControllerTest {
 
         when(memberService.updateMember(any(Integer.class), any(MemberRequestDto.class))).thenReturn(BuildTestObjects.buildDtoModifyResponse());
 
-        ResponseEntity<MemberResponseDto> memberResponse = memberController.updateMember(Integer.valueOf(1), BuildTestObjects.buildDtoRequest());
+        ResponseEntity<MemberResponseDto> memberResponse = memberController.updateMember(1, BuildTestObjects.buildDtoRequest());
 
         assertNotNull(memberResponse);
 
@@ -112,7 +110,7 @@ public class MemberControllerTest {
     @Test
     public void deleteMemberTest() {
 
-        memberController.deleteMember(Integer.valueOf(1));
+        memberController.deleteMember(1);
         verify(memberService).deleteMember(any(Integer.class));
     }
 

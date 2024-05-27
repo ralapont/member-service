@@ -96,12 +96,15 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.12</version>
 				<configuration>
 					<excludes>
 						<exclude>com/example/members/MembersApplication.class</exclude>
 						<exclude>com/example/members/model/input/*.class</exclude>
 						<exclude>com/example/members/model/output/*.class</exclude>
 						<exclude>com/example/members/entity/*.class</exclude>
+						<exclude>com/example/members/exceptions/*.class</exclude>
+						<exclude>com/example/members/controller/MemberExceptionHandler.class</exclude>
 					</excludes>
 					<rules>
 						<rule>

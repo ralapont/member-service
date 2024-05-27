@@ -9,7 +9,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class BuildTestObjects {
 
@@ -17,14 +16,14 @@ public class BuildTestObjects {
     public static List<MemberEntity> buildListEntityMock() {
 
         List<MemberEntity> members = new ArrayList<>();
-        members.add(buildEntityMock().get());
+        members.add(BuildTestObjects.buildEntityMock());
         return members;
     }
 
-    public static Optional<MemberEntity> buildEntityMock() {
+    public static MemberEntity buildEntityMock() {
 
-        MemberEntity memberEntity = MemberEntity.builder()
-                .id(Integer.valueOf(1))
+        return MemberEntity.builder()
+                .id(1)
                 .lastName("Grogan")
                 .firstName("Vladimir")
                 .expiration(stringToLocalDate("2004-10-25"))
@@ -36,14 +35,12 @@ public class BuildTestObjects {
                 .phone("332-511-5038")
                 .interests("Great Depression,Spanish-American War")
                 .build();
-
-        return  Optional.of(memberEntity) ;
     }
 
-    public static Optional<MemberEntity> buildEntityModifyMock() {
+    public static MemberEntity buildEntityModifyMock() {
 
-        MemberEntity memberEntity = MemberEntity.builder()
-                .id(Integer.valueOf(1))
+        return MemberEntity.builder()
+                .id(1)
                 .lastName("Grogan")
                 .firstName("Vladimir")
                 .expiration(stringToLocalDate("2004-04-25"))
@@ -55,8 +52,6 @@ public class BuildTestObjects {
                 .phone("332-511-5038")
                 .interests("Great Depression,Spanish-American War")
                 .build();
-
-        return  Optional.of(memberEntity) ;
     }
 
     public static List<MemberResponseDto> buildListDtoResponse() {
@@ -67,7 +62,7 @@ public class BuildTestObjects {
 
     public static MemberResponseDto buildDtoResponse() {
         return  MemberResponseDto.builder()
-                .id(Integer.valueOf(1))
+                .id(1)
                 .lastName("Grogan")
                 .firstName("Vladimir")
                 .expiration(stringToLocalDate("2004-10-25"))
@@ -83,7 +78,7 @@ public class BuildTestObjects {
 
     public static MemberResponseDto buildDtoModifyResponse() {
         return  MemberResponseDto.builder()
-                .id(Integer.valueOf(1))
+                .id(1)
                 .lastName("Grogan")
                 .firstName("Vladimir")
                 .expiration(stringToLocalDate("2004-04-25"))

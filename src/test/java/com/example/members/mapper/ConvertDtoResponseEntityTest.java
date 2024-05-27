@@ -20,7 +20,7 @@ public class ConvertDtoResponseEntityTest {
     void entityToDto() {
 
         MemberEntity memberEntity = MemberEntity.builder()
-                .id(Integer.valueOf(1))
+                .id(1)
                 .lastName("Grogan")
                 .firstName("Vladimir")
                 .expiration(BuildTestObjects.stringToLocalDate("2004-10-25"))

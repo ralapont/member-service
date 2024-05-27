@@ -2,7 +2,6 @@ package com.example.members.mapper;
 
 import com.example.members.entity.MemberEntity;
 import com.example.members.model.input.MemberRequestDto;
-import com.example.members.model.output.MemberResponseDto;
 import com.example.members.utils.BuildTestObjects;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class ConvertDtoRequestEntityTest {
     void entityToDto() {
 
         MemberEntity memberEntity = MemberEntity.builder()
-                .id(Integer.valueOf(1))
+                .id(1)
                 .lastName("Grogan")
                 .firstName("Vladimir")
                 .expiration(BuildTestObjects.stringToLocalDate("2004-10-25"))

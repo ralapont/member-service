@@ -50,10 +50,9 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public MemberResponseDto updateMember(Integer id, MemberRequestDto memberRequestDto) throws MemberNotFoundException {
 
-        Optional<MemberEntity> oldEntityOpt = memberRepository.findById(id);
-
-        MemberEntity oldEntity;
-        oldEntity = oldEntityOpt.orElseGet(() -> oldEntityOpt.orElseThrow(() -> new MemberNotFoundException(id)));
+        MemberEntity oldEntity =
+                memberRepository.findById(id)
+                        .orElseThrow(() -> new MemberNotFoundException(id));
 
         modifyEntity(oldEntity, memberRequestDto);
         MemberEntity entity = memberRepository.save(oldEntity);

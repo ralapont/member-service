@@ -3,6 +3,7 @@ package com.example.members.controller;
 import com.example.members.model.input.MemberRequestDto;
 import com.example.members.model.output.MemberResponseDto;
 import com.example.members.service.impl.MemberServiceImpl;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +35,7 @@ public class MemberController {
 
 
     @PostMapping("/members")
-    public ResponseEntity<MemberResponseDto> saveMember(@RequestBody MemberRequestDto memberRequestDto) {
+    public ResponseEntity<MemberResponseDto> saveMember(@Valid @RequestBody MemberRequestDto memberRequestDto) {
 
         MemberResponseDto responseEntity = memberService.saveMember(memberRequestDto);
         java.net.URI location = ServletUriComponentsBuilder
@@ -46,7 +47,7 @@ public class MemberController {
     }
 
     @PutMapping("/members/{id}")
-    public ResponseEntity<MemberResponseDto> updateMember(@PathVariable Integer id, @RequestBody MemberRequestDto memberRequestDto) {
+    public ResponseEntity<MemberResponseDto> updateMember(@PathVariable Integer id, @Valid @RequestBody MemberRequestDto memberRequestDto) {
 
         return ResponseEntity.ok(memberService.updateMember(id, memberRequestDto));
     }

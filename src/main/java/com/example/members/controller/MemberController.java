@@ -1,5 +1,6 @@
 package com.example.members.controller;
 
+import com.example.members.feign.dtos.State;
 import com.example.members.model.input.MemberRequestDto;
 import com.example.members.model.output.MemberResponseDto;
 import com.example.members.service.impl.MemberServiceImpl;
@@ -19,6 +20,12 @@ import java.util.List;
 public class MemberController {
 
     private MemberServiceImpl memberService;
+
+    @GetMapping("/members/demo")
+    public ResponseEntity<List<State>> demoFeign() {
+
+        return ResponseEntity.ok(memberService.getStates());
+    }
 
     @GetMapping("/members/{id}")
     public ResponseEntity<MemberResponseDto> getMemberById(@PathVariable Integer id) {

@@ -1,6 +1,7 @@
 package com.example.members.service;
 
 import com.example.members.exceptions.MemberNotFoundException;
+import com.example.members.feign.dtos.State;
 import com.example.members.model.input.MemberRequestDto;
 import com.example.members.model.output.MemberResponseDto;
 
@@ -17,4 +18,6 @@ public interface MemberService {
     MemberResponseDto updateMember(Integer integer, MemberRequestDto memberRequestDto) throws MemberNotFoundException;
 
     void deleteMember(Integer id);
+
+    List<State> getStates();
 }

@@ -1,0 +1,352 @@
+[
+  {
+    "codigo": "AK",
+    "state": "Alaska",
+    "capital": "Juneau",
+    "region": "West",
+    "flag": "UklGRpIAAABXRUJQVlA4TIUAAAAvFIADAMegoI0kNXaMJu4eFDSS1Oa+9wfkgKiR1CzYw78Rvi178x9zJyKQgjSIQ0xMBSjUhQSAQiqW00/EQmpAIJC/BwjK8oXVZ33+X2DQSJKiPn5m8m/2FwxE9F9h0gZM0vELjm6fiH5FYThl2bkqEoecRBlvEcQXqd3Cn+WBNkn+mHEQAA=="
+  },
+  {
+    "codigo": "AL",
+    "state": "Alabama",
+    "capital": "Montgomery",
+    "region": "South",
+    "flag": "iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAMAAAA4caRkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEWxACG7IT7qu8T////tw8u9JkK+KkaxASLQZnr68PL9+vvbiJezBia5GTfmrrjptr+6HTqyBCTVd4n9+Pnx0tjBNU/LVWv56u367vC/L0rvzNP++/zdkJ60Cyu4FjTioa3nsry5GjizCCjYf5Dz2N3DPFXJUGfwzdP//v7gmaa1DSy0Cir+/Pzrv8eAq3BtAAAAAWJLR0QDEQxM8gAAAAd0SU1FB+cGAgQNASd8WrYAAACKSURBVBjTfdDrDoIwDAXggwdlgIoTlYsXUAHxwvu/ngWiwYTZH0v3pWu6ArAm/A17CmAGOModqKucVj1/DiyWXw5WgF6HIDdbebaLOo2V5ElKinN/OAKnTLL8DFyuHnsni1LKqlslZ1l00jvr+wNtPP0Xh042Wlg3n+v/+vH+hnnG5zf917Qfwz7fENoLeQstKLAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDYtMDJUMDQ6MTM6MDErMDA6MDBj7+AjAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTA2LTAyVDA0OjEzOjAxKzAwOjAwErJYnwAAAABJRU5ErkJggg=="
+  },
+  {
+    "codigo": "AR",
+    "state": "Arkansas",
+    "capital": "Little Rock",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "AZ",
+    "state": "Arizona",
+    "capital": "Phoenix",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "CA",
+    "state": "California",
+    "capital": "Sacramento",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "CO",
+    "state": "Colorado",
+    "capital": "Denver",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "CT",
+    "state": "Connecticut",
+    "capital": "Hartford",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "DE",
+    "state": "Delaware",
+    "capital": "Dover",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "FL",
+    "state": "Florida",
+    "capital": "Tallahassee",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "GA",
+    "state": "Georgia",
+    "capital": "Atlanta",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "HI",
+    "state": "Hawaii",
+    "capital": "Honolulu",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "IA",
+    "state": "Iowa",
+    "capital": "Des Moines",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "ID",
+    "state": "Idaho",
+    "capital": "Boise",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "IL",
+    "state": "Illinois",
+    "capital": "Springfield",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "IN",
+    "state": "Indiana",
+    "capital": "Indianapolis",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "KS",
+    "state": "Kansas",
+    "capital": "Topeka",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "KY",
+    "state": "Kentucky",
+    "capital": "Frankfort",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "LA",
+    "state": "Louisiana",
+    "capital": "Baton Rouge",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "MA",
+    "state": "Massachusetts",
+    "capital": "Boston",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "MD",
+    "state": "Maryland",
+    "capital": "Annapolis",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "ME",
+    "state": "Maine",
+    "capital": "Augusta",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "MI",
+    "state": "Michigan",
+    "capital": "Lansing",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "MN",
+    "state": "Minnesota",
+    "capital": "St. Paul",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "MO",
+    "state": "Missouri",
+    "capital": "Jefferson City",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "MS",
+    "state": "Mississippi",
+    "capital": "Jackson",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "MT",
+    "state": "Montana",
+    "capital": "Helena",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "NC",
+    "state": "North Carolina",
+    "capital": "Raleigh",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "ND",
+    "state": "North Dakota",
+    "capital": "Bismarck",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "NE",
+    "state": "Nebraska",
+    "capital": "Lincoln",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "NH",
+    "state": "New Hampshire",
+    "capital": "Concord",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "NJ",
+    "state": "New Jersey",
+    "capital": "Trenton",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "NM",
+    "state": "New Mexico",
+    "capital": "Santa Fe",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "NV",
+    "state": "Nevada",
+    "capital": "Carson City",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "NY",
+    "state": "New York",
+    "capital": "Albany",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "OH",
+    "state": "Ohio",
+    "capital": "Columbus",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "OK",
+    "state": "Oklahoma",
+    "capital": "Oklahoma City",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "OR",
+    "state": "Oregon",
+    "capital": "Salem",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "PA",
+    "state": "Pennsylvania",
+    "capital": "Harrisburg",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "RI",
+    "state": "Rhode Island",
+    "capital": "Providence",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "SC",
+    "state": "South Carolina",
+    "capital": "Columbia",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "SD",
+    "state": "South Dakota",
+    "capital": "Pierre",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "TN",
+    "state": "Tennessee",
+    "capital": "Nashville",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "TX",
+    "state": "Texas",
+    "capital": "Austin",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "UT",
+    "state": "Utah",
+    "capital": "Salt Lake City",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "VA",
+    "state": "Virginia",
+    "capital": "Richmond",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "VT",
+    "state": "Vermont",
+    "capital": "Montpelier",
+    "region": "Northeast",
+    "flag": null
+  },
+  {
+    "codigo": "WA",
+    "state": "Washington",
+    "capital": "Olympia",
+    "region": "West",
+    "flag": null
+  },
+  {
+    "codigo": "WI",
+    "state": "Wisconsin",
+    "capital": "Madison",
+    "region": "Midwest",
+    "flag": null
+  },
+  {
+    "codigo": "WV",
+    "state": "West Virginia",
+    "capital": "Charleston",
+    "region": "South",
+    "flag": null
+  },
+  {
+    "codigo": "WY",
+    "state": "Wyoming",
+    "capital": "Cheyenne",
+    "region": "West",
+    "flag": null
+  }
+]

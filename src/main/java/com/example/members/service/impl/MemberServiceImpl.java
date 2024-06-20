@@ -2,6 +2,8 @@ package com.example.members.service.impl;
 
 import com.example.members.entity.MemberEntity;
 import com.example.members.exceptions.MemberNotFoundException;
+import com.example.members.feign.client.StateServiceProxy;
+import com.example.members.feign.dtos.State;
 import com.example.members.mapper.ConvertDtoRequestEntity;
 import com.example.members.mapper.ConvertDtoResponseEntity;
 import com.example.members.model.input.MemberRequestDto;
@@ -10,6 +12,7 @@ import com.example.members.repository.MemberRepository;
 import com.example.members.service.MemberService;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,18 +20,22 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
+@Slf4j
 @Service
 public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
     private final ConvertDtoResponseEntity convertDtoEntity;
     private final ConvertDtoRequestEntity convertDtoRequestEntity;
+    private final StateServiceProxy stateExchangeServiceProxy;
 
     @Override
     public MemberResponseDto getMemberById(Integer id) throws MemberNotFoundException {
 
         Optional<MemberEntity> memberEntity = memberRepository.findById(id);
-        return memberEntity.map(convertDtoEntity::entityToDto).orElseThrow(() -> new MemberNotFoundException(id));
+        MemberResponseDto response =  memberEntity.map(convertDtoEntity::entityToDto).orElseThrow(() -> new MemberNotFoundException(id));
+
+        return response;
     }
 
     @Override
@@ -63,6 +70,13 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void deleteMember(Integer id) {
         memberRepository.deleteById(id);
+    }
+
+    @Override
+    public List<State> getStates() {
+
+        return stateExchangeServiceProxy.getState();
+
     }
 
     private void modifyEntity(MemberEntity oldEntity, MemberRequestDto memberRequestDto) {

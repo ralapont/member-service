@@ -15,7 +15,12 @@ import java.time.format.DateTimeParseException;
 @Slf4j
 public class LocalDateDeSerializer  extends StdDeserializer<LocalDate> {
 
-    public static String DATE_FORMAT = "yyyy-MM-dd";
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public static String DATE_FORMAT = "yyyy-MM-dd";
 
     public LocalDateDeSerializer() {
         super(LocalDate.class);
